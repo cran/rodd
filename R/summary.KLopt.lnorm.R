@@ -1,4 +1,4 @@
-summary.tpopt <- function(object, ...)
+summary.KLopt.lnorm <- function(object, ...)
 {
     res <- object
     cat("\n###############################################################################\n")

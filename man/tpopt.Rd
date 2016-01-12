@@ -290,6 +290,52 @@ res <- tpopt(x = seq(0, 500, 100), eta = eta, theta.fix = theta.fix, p = p)}
 
 plot(res)
 summary(res)
+
+\dontrun{
+### Example from [8]
+### An example of how case 2 can be computed for example 1 in [8] with tpopt function
+
+#List of models
+eta.1 <- function(x, theta.1) 
+    log(theta.1[1] * x + theta.1[2] * x / (x + theta.1[3]))
+
+eta.2 <- function(x, theta.2) 
+    log(theta.2[1] * x / (x + theta.2[2]))
+
+eta <- list(eta.1, eta.2)
+    
+#List of fixed parameters
+theta.1 <- c(1, 1, 1)
+theta.2 <- c(1, 1)
+theta.fix <- list(theta.1, theta.2)
+
+#Comparison table
+p <- matrix(
+    c(
+        0,1,
+        0,0
+    ), c(length(eta), length(eta)), byrow = TRUE)
+
+#Case 2, method 1
+#Design estimation
+res <- tpopt(
+    x = seq(0.1, 5, length.out = 10), 
+    eta = eta, theta.fix = theta.fix, p = p, x.lb = 0.1, x.rb = 5, 
+    opt = list(method = 1)
+)
+plot(res)
+summary(res)
+
+#Case 2, method 2
+#Design estimation
+res <- tpopt(
+    x = seq(0.1, 5, length.out = 10), 
+    eta = eta, theta.fix = theta.fix, p = p, x.lb = 0.1, x.rb = 5, 
+    opt = list(method = 2)
+)
+plot(res)
+summary(res)
+}
 }
 \keyword{discriminative designs}
 

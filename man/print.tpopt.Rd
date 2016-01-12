@@ -1,4 +1,4 @@
-\name{print}
+\name{print.tpopt}
 \alias{print.tpopt}
 \title{Short information about the input}
 \description{Prints short information about the input object of class ``tpopt''.}

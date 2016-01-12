@@ -1,4 +1,4 @@
-\name{summary}
+\name{summary.tpopt}
 \alias{summary.tpopt}
 \title{Detailed information about the input}
 \description{Prints detailed information about the input object of class ``tpopt''.}

@@ -1,4 +1,4 @@
-\name{plot}
+\name{plot.tpopt}
 \alias{plot.tpopt}
 \title{Plot of \eqn{\Psi}{Psi} function for resulting design}
 \description{Plots the \eqn{\Psi(x,\xi)}{Psi(x,xi)} function for resulting approximation \eqn{\xi^{**}}{xi^{**}} of the \eqn{T_{\mathrm{P}}}{T_P}-optimal design achieved with the help of \code{\link{tpopt}}. The definition of \eqn{\Psi(x,\xi)}{Psi(x,xi)} can be found in the ``details'' section of function's \code{\link{tpopt}} specifications.

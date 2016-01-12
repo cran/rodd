@@ -1,5 +1,5 @@
 second.order.num.deriv <- function(f, x, epsilon, ...)
 {
-	(Psi(x + epsilon, ...) - 2 * Psi(x, ...) + Psi(x - epsilon, ...)) / (epsilon * epsilon)
+	(f(x + epsilon, ...) - 2 * f(x, ...) + f(x - epsilon, ...)) / (epsilon * epsilon)
 }
 

@@ -1,4 +1,4 @@
 num.deriv <- function(f, x, epsilon, ...)
 {
-    (Psi(x + epsilon, ...) - Psi(x - epsilon, ...)) / (2 * epsilon)
+    (f(x + epsilon, ...) - f(x - epsilon, ...)) / (2 * epsilon)
 }
